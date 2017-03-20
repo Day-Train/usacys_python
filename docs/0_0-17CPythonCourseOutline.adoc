@@ -17,30 +17,32 @@ Finally, the students will be exposed to larger Python programs representing IT 
 
 == 1.2 Learning Objectives:
 
-[arabic]
-. Python Basics
-[arabic]
-..	Intro to python modules
-[arabic]
-... PIP
-... Installing from source
-... PYTHONPATH
-... Conda / Virtualenv
-.. Python 2.7 vs 3
-.. Working with IDEs
-.. iPython
-. Designing Python Scripts
-.. Basic Data Structures (list, dict, tuple, etc)
-.. Flow Control (loops, functions)
-.. Objects
-. Script Writing
-.. File Handling
-.. User Input
-.. Networking
-.. REGEX
-4.	Script Debugging
-.. Troubleshooting Long Python Scripts
-.. Working with Debug
+----
+1.       Python Basics
+ 1.1.    Intro to python modules
+  1.1.1  PIP
+  1.1.2. Installing from source
+  1.1.3. PYTHONPATH
+  1.1.4. Conda / Virtualenv
+ 1.2.    Python 2.7 vs 3
+ 1.3.    Working with IDEs
+ 1.4.    iPython
+ 
+2.       Designing Python Scripts
+ 2.1.    Basic Data Structures (list, dict, tuple, etc)
+ 2.2.    Flow Control (loops, functions)
+ 2.3.    Objects
+
+3.       Script Writing
+ 3.1.    File Handling
+ 3.2.    User Input
+ 3.3.    Networking
+ 3.4.    REGEX
+
+4.	     Script Debugging
+ 4.1.    Troubleshooting Long Python Scripts
+ 4.2.    Working with Debug
+----
 
 == 1.3 Assessment Overview:
 Where ever possible, exercises will result in a key (typically a SHA1) for the students to discover when completing it successfully.  Students will submit these keys as proof of completion.
