@@ -17,8 +17,11 @@ Finally, the students will be exposed to larger Python programs representing IT 
 
 == 1.2 Learning Objectives:
 
+[arabic]
 . Python Basics
+[arabic]
 ..	Intro to python modules
+[arabic]
 ... PIP
 ... Installing from source
 ... PYTHONPATH
