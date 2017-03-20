@@ -1,0 +1,4 @@
+:doctype: book
+:stylesheet: ../prog.css
+
+1)
