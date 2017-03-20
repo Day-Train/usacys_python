@@ -1,0 +1,28 @@
+:doctype: book
+:stylesheet: ../prog.css
+
+== Exercise 1_7: It’s only cool if it starts with an ‘i’
+
+=== Exercise Summary:
+T
+
+== Learning Objectives:
+----
+1.         Python Basics
+ 1.4.     iPython
+----
+
+=== Narrative:
+B
+
+== Instructions:
+. D
+.
+
+== Materials:
+. 1_1 Baseline.pcap
+
+== References:
+* http://digitalcorpora.org/corpora/network-packet-dumps/
+
+== Instructor Notes:
