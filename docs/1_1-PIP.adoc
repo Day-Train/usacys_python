@@ -1,0 +1,54 @@
+:doctype: book
+:stylesheet: ../prog.css
+
+= Exercise 1_1: PIP-boy, not just for survival situations
+
+== Exercise Summary: One of the most powerful parts of the Python language is the ability to utilize modules crafted by other programmers.  There are a number of tools that enable you to import these modules into your Python installation, but one of the most popular is pip.  In this exercise we will explore some of the PIP settings and usages.
+
+== Learning Objectives:
+
+----
+1.         Python Basics
+ 1.1.     Intro to python modules
+  1.1.1  PIP
+----
+
+=== Narrative:
+Follow the instructions below to explore the use of the PIP module.
+
+== Instructions:
+
+. Answer the following:
+** Describe the process pip uses when looking for a module.
+** Can you browse for it without pip?
+** What is PyPI?
+** What is the difference between a global and a local install?  Which is default?
+. Install the missing requirement for ex1_1_1.py using PIP.  Where did this module install?
+. Install the requirements.txt file for ex1_1_2.py
+. Create a requirements.txt file using pip freeze for ex1_1_3.py after installing all dependencies
+
+== Materials:
+. ex1_1_1.py
+. ex1_1_2.py
+. ex1_1_2_requirements.txt
+. ex1_1_3.py
+
+
+== References:
+* “User Guide,” User Guide — pip 9.0.1 documentation. [Online]. Available: https://pip.pypa.io/en/stable/user_guide/#installing-packages. [Accessed: 10-Mar-2017].
+
+== Instructor Notes:
+
+[start=2]
+. For ex1_1_1.py, the program is missing the numpy module.  This can be seen when attempting to run it with 'python ex1_1_1.py' receiving the error: + \
+----
+    Traceback (most recent call last):
+      File "ex1_1_1.py", line 1, in <module>
+        import numpy as np
+    ImportError: No module named numpy
+----
+This can be remedied with pip install numpy.  After running the program, the students should receive the sha1 hash: 34813e919d90ef6df887e1348fbb69bd6cd4629b
+. For ex1_1_2.py the program uses 3 different modules.  These modules have other dependencies, as can be seen in the ex1_1_2_requirements.txt file.  These can be installed with pip install -r ex1_1_2_requirements.txt. + \ 
+After running the program, students get the hash: c4e9c8e897eed9201ed74754ebb84b4851662238
+. In ex1_1_3.py the modules pyprimes, ad, and uncertainties needs to be installed with pip in order to function.  The students should then do a pip freeze > requirements.txt to save off the requirements and their dependencies.  The program will yield the hash: b892ab1259c3e394f29dd4782704b956709b2184
+
