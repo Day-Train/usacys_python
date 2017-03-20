@@ -39,7 +39,7 @@ Finally, the students will be exposed to larger Python programs representing IT 
  3.3.     Networking
  3.4.     REGEX
 
-4.	       Script Debugging
+4.         Script Debugging
  4.1.     Troubleshooting Long Python Scripts
  4.2.     Working with Debug
 ----
