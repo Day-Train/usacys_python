@@ -47,7 +47,7 @@ Follow the instructions below to explore the use of the PIP module.
     File "ex1_1_1.py", line 1, in <module>
       import numpy as np
   ImportError: No module named numpy
-
++
     This can be remedied with pip install numpy.  After running the program, the students should receive the sha1 hash: 34813e919d90ef6df887e1348fbb69bd6cd4629b 
 
 [start=3]
