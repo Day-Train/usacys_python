@@ -32,6 +32,6 @@ Troubleshoot these programs to get them functioning.
 * J. Filippazzo, “Editing PYTHONPATH (or "Where's my module?!"),” Lee On Coding Full Atom, 17-Sep-2012. [Online]. Available: https://leemendelowitz.github.io/blog/how-does-python-find-packages.html. [Accessed: 16-Mar-2017].
 * V. Summers, “How to Set Your Python Path,” Techwalla. [Online]. Available: https://www.techwalla.com/articles/how-to-set-your-python-path. [Accessed: 11-Mar-2017].
 
-=- Instructor Notes:
+== Instructor Notes:
 . For ex1_3_1 there is a hardcoded PYTHONPATH variable added to include the host object in the scanner module file.  This should be a relative directory add rather than a hardcoded one.
 . For ex1_3_2 the __init__.py file has a __all__ variable assigned in it.  This limits the functions that will be imported from the submodules with * is called.  Additionally, there is a fence port error in scan_ports due to the use of xrange, it will never scan the max port.
