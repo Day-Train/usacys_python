@@ -47,8 +47,10 @@ Follow the instructions below to explore the use of the PIP module.
     File "ex1_1_1.py", line 1, in <module>
       import numpy as np
   ImportError: No module named numpy
-
-    This can be remedied with pip install numpy.  After running the program, the students should receive the sha1 hash: 34813e919d90ef6df887e1348fbb69bd6cd4629b 
++
+----
+  This can be remedied with pip install numpy.  After running the program, the students should receive the sha1 hash: 34813e919d90ef6df887e1348fbb69bd6cd4629b 
+----
 
 [start=3]
 . For ex1_1_2.py the program uses 3 different modules.  These modules have other dependencies, as can be seen in the ex1_1_2_requirements.txt file.  These can be installed with pip install -r ex1_1_2_requirements.txt. + \ 
