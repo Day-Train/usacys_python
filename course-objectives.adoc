@@ -1,0 +1,49 @@
+:doctype: book
+:stylesheet: ../tech.css
+
+= Python Programming Course Objectives
+
+. Describe the importance of Python
+  - Topics: Interpreted v. Compiled, type safety
+  - Bloom Level 2: Comprehension
+  - Assessed via Day 2 Quiz
+
+. Demonstrate the ability to install python and write basic programs
+  - Topics: syntax, whitespace
+  - Bloom Level 3: Application
+  - Assessed via Day 2 Quiz
+
+. Compare various data types and variables
+  - Topics: integers, strings, floats, objects
+  - Bloom Level 6: Evaluation
+  - Assessed via Day 3 Quiz
+
+. Analyze ways to control flow of program
+  - Topics: Conditionals, Control Flow, Loops
+  - Bloom Level 6: Evaluation
+  - Assessed via Day 3 Quiz
+
+. Revise previous programs to incorporate data structures
+  - Topics: lists, stacks, queues 
+  - Bloom Level 5: Synthesis
+  - Assessed via Day 4 Quiz
+
+. Integrate functions within programs
+  - Topics: functions, code reuse
+  - Bloom Level 5: Synthesis
+  - Assessed via Day 4 Quiz
+
+. Create program that performs IO
+  - Topics: IO, read/write against objects, writing to memory
+  - Bloom Level 5: Synthesis
+  - Assessed via Day 5 Quiz
+
+. Demonstrate ability to work with external libraries
+  - Topics: importing functions and libraries
+  - Bloom Level 3: Application
+  - Assessed via Day 5 Quiz
+  
+. Assess a programs functionality and recommend improvements
+  - Topics: analysis, code interpretation
+  - Bloom Level 6: Evaluation
+  - Assessed via Final Exam
