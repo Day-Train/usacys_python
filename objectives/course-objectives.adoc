@@ -46,7 +46,7 @@
   - Assessed via Day 5 Quiz
   
 . Assess program functionality and recommend improvements
-  - Topics: interpret and analyze code
+  - Topics: interpret and analyze code, error handling
   - Bloom's Levels 4 and 5: Analyze and Evaluate
   - Assessed via Final Exam
   
