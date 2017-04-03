@@ -39,7 +39,7 @@
   - Assessed via Day 5 Quiz
 
 . Demonstrate an ability to work with external libraries
-  - Topics: importing functions and libraries
+  - Topics: understand modules and packages, import and use modules
   - Bloom's Level 3: Application
   - Assessed via Day 5 Quiz
   
