@@ -7,5 +7,6 @@ genpdf:
       - find . -name '*.html' | while read html;do file=$(echo $html | sed 's/\.[^.]*$//') && ./wkhtmltopdf $html $file.pdf; done
   artifacts:
     paths:
+      - ./*.pdf
       - ./*/*.pdf
       - ./*/*/*.pdf
