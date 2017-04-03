@@ -29,7 +29,7 @@
   - Assessed via Day 4 Quiz
 
 . Integrate functions within programs
-  - Topics: functions, code reuse
+  - Topics: functional decomposition, code reuse
   - Bloom's Levels 4 and 6: Design and Analyze
   - Assessed via Day 4 Quiz
 
