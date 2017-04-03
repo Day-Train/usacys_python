@@ -34,7 +34,7 @@
   - Assessed via Day 4 Quiz
 
 . Create program that performs input and output
-  - Topics: I/O, read and write objects, write to memory
+  - Topics: input parameters versus user input/interaction, read and write objects, write to memory
   - Bloom's Level 3: Application
   - Assessed via Day 5 Quiz
 
