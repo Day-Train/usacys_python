@@ -1,0 +1,42 @@
+:doctype: book
+:stylesheet: ../tech.css
+
+= Python Challenges
+
+Note: Only attempt these if you are confident you already meet the objectives and have completed all activities for the day!
+
+== Automate the Boring Stuff with Python
+
+Practical programming exercises
+
+Access at https://automatetheboringstuff.com
+
+Recommended: Use python to manipulate excel spreadsheets and csv files
+
+
+== Invent (Computer Games) with Python
+
+Go in depth through algorithmic thought and create your own games in python
+
+Access at https://inventwithpython.com/chapters
+
+Recommended: Graphics, collision detection, sound (these require Pygame)
+
+
+== Use the Pygame Package to create Computer Games
+
+Go to the next level with the Pygame multimedia package
+
+Access at https://inventwithpython.com/pygame/chapters
+
+Recommended: Tetromino
+
+
+== Hacking Ciphers with Python
+
+Use python to encrypt and decrypt with different ciphers
+
+Access at https://inventwithpython.com/hacking/chapters
+
+Recommended: Everything!
+
