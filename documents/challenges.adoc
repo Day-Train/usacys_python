@@ -5,6 +5,8 @@
 
 Note: Only attempt these if you are confident you already meet the objectives and have completed all activities for the day!
 
+'''
+
 == Automate the Boring Stuff with Python
 
 Practical programming exercises
@@ -40,3 +42,4 @@ Access at https://inventwithpython.com/hacking/chapters
 
 Recommended: Everything!
 
+'''
