@@ -1,0 +1,219 @@
+heat_template_version: 2015-10-15
+
+description: Python Programming Heat Template Version 0000
+
+parameters:
+
+  student_id:
+    type: string
+    label: Student ID
+    description: Student ID Number
+    default: 0
+
+  first_name:
+    type: string
+    label: First Name
+    description: First Name
+    default:
+    constraints:
+      - length: { min: 1, max 15 }
+        description: First name must be no longer than 15 characters
+      - allowed_pattern: "[a-zA-Z]*"
+        description: First name may only contain letters
+
+  last_name:
+    type: string
+    label: Last Name
+    description: Last Name
+    default:
+    constraints:
+      - length: { min: 1, max 15 }
+        description: Last name must be no longer than 15 characters
+      - allowed_pattern: "[a-zA-Z]*"
+        description: Last name may only contain letters
+
+  root_password:
+    type: string
+    label: Root Password
+    description: root password for VMs
+    hidden: true
+    default: changeme
+    constraints:
+      - length: { min: 8, max 20 }
+        description: Password must be between 8 and 20 characters
+      - allowed_pattern: "[a-zA-Z0-9]*"
+        description: Password may not contain special characters
+    
+  safe_mode_administrator_password:
+    type: string
+    label: Domain Administrator Password   
+    description: Domain Administrator Password
+    hidden: true
+    default: changeme
+    constraints:
+      - length: { min: 8, max 64 }
+        description: Password must be at least 8 characters
+      - allowed_pattern: "[a-zA-Z0-9]*"
+        description: Password may not contain special characters
+  
+resources: 
+
+  stu-network: 
+    type: OS::Neutron::Net
+    properties: 
+      name:
+        str_replace:
+          template: lastname_net
+          params:
+            lastname: { get_param: last_name }
+
+  stu-subnet: 
+    type: OS::Neutron::Subnet
+    properties: 
+      allocation_pools:
+        - start:
+            str_replace:
+              template: 10.studentID.0.5
+              params:
+                studentID: { get_param: student_id }
+          end:
+            str_replace:
+              template: 10.studentID.0.250
+              params:
+                studentID: { get_param: student_id }
+      cidr:
+        str_replace:
+          template: 10.studentID.0.0/24
+          params:
+            studentID: { get_param: student_id }          
+      gateway_ip:
+        str_replace:
+          template: 10.studentID.0.254
+          params:
+            studentID: { get_param: student_id }          
+      network: { get_resource: stu-network }
+      dns_nameservers:
+        str_split:
+          - ','
+          - str_replace:
+              template: 10.studentID.0.1,172.16.0.254
+              params:
+                studentID: { get_param: student_id }
+      name:
+        str_replace:
+          template: lastname_subnet
+          params:
+            lastname: { get_param: last_name }
+            
+  stu-router:
+    type: OS::Neutron::Router
+    properties:
+      name:
+        str_replace:
+          template: lastname_router
+          params:
+            lastname: { get_param: last_name }          
+      external_gateway_info: { "network": Floating Network }
+ 
+  stu-router-interface:
+    type: OS::Neutron::RouterInterface
+    properties:
+      router_id: { get_resource: stu-router }
+      subnet_id: { get_resource: stu-subnet }
+     
+  stu-float-ip:
+    type: OS::Neutron::FloatingIP
+    depends_on: stu-router
+    properties:
+      floating_network: Floating Network
+
+  stu-float-port:
+    type: OS::Neutron::Port
+    depends_on: stu-sec-group
+    properties:
+      network_id: { get_resource: stu-network }
+      fixed_ips:
+      - subnet_id: { get_resource: stu-subnet }
+        ip_address:
+          str_replace:
+            template: 10.studentID.0.2
+            params:
+              studentID: { get_param: student_id }
+      security_groups:
+      - { get_resource: stu-sec-group }
+  
+  stu-float-ip-assoc:
+    type: OS::Neutron::FloatingIPAssociation
+    properties:
+      floatingip_id: { get_resource: stu-float-ip }
+      port_id: { get_resource: stu-float-port }
+      
+  stu-sec-group:
+    type: OS::Neutron::SecurityGroup
+    properties:
+      description: Enable RDP and ICMP
+      name: RDP/ICMP Enable
+      rules: [{"port_range_max":3389,"port_range_min":3389,"protocol":TCP},{"protocol":ICMP}]
+      
+  stu-sec-group-dc:
+    type: OS::Neutron::SecurityGroup
+    properties:
+      description: Enable DNS for the DC
+      name: DNS Enable
+      rules: [{"port_range_max":65535,"port_range_min":0,"protocol":TCP},{"port_range_max":65535,"port_range_min":0,"protocol":UDP},{"protocol":ICMP}]
+ 
+  server0:
+    type: OS::Nova::Server
+    properties:
+      name:
+        str_replace: lastname-win10
+          template: 
+          params:
+            lastname: { get_param: last_name }
+      image: Windows 10
+      flavor: cy.large
+      networks:
+        - port: { get_resource: stu-float-port }
+      user_data:
+        str_replace:
+          template: | 
+            #ps1_sysnative
+            $ErrorActionPreference = 'Stop'
+            netsh advfirewall set allprofiles state off
+            set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server' -name "fDenyTSConnections" -Value 0
+            exit 1001
+          params:
+            $password: { get_param: root_password }
+            win10Hostname:
+              str_replace:
+                template: lastname-win10
+                params:
+                  lastname: { get_param: last_name }
+      user_data_format: RAW
+
+  server1:
+    type: OS::Nova::Server
+    properties:
+      name:
+        str_replace: 
+          template: 
+          params:
+            lastname: { get_param: last_name }
+      image: Windows 10
+      flavor: cy.large
+      networks:
+        - network: { get_resource: stu-network }
+      security_groups: 
+        - { get_resource: stu-sec-group-dc }
+      user_data:
+        str_replace:
+          template:
+
+          params:
+            $password: { get_param: root_password }
+            win10Hostname:
+              str_replace:
+                template: lastname-win10
+                params:
+                  lastname: { get_param: last_name }
+      user_data_format: RAW      
