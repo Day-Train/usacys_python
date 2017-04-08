@@ -33,7 +33,7 @@ resources:
     type: OS::Neutron::Router
     properties:
       name: external_router
-      external_gateway_info: { network:public }
+      external_gateway_info: { network: public }
     
   network0: 
     type: OS::Neutron::Net
