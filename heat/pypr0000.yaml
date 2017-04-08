@@ -83,7 +83,7 @@ resources:
       network_id: { get_resource: network0 }
       fixed_ips:
       - subnet_id: { get_resource: subnetwork0 }
-        ip_address: 10.0.0.3
+        ip_address: 10.0.0.1
       security_groups:
       - { get_resource: secgroup_0 }
   
@@ -92,16 +92,7 @@ resources:
     properties:
       floatingip_id: { get_resource: float_ip }
       port_id: { get_resource: float_port }
-    
-  port_1: 
-    type: OS::Neutron::Port
-    properties:
-      network_id: { get_resource: network0 }
-      fixed_ips:
-        - subnet_id: { get_resource: subnetwork0 }
-          ip_address: 10.0.0.1
-      port_security_enabled: false
-    
+     
   port_2: 
     type: OS::Neutron::Port
     properties:
@@ -122,7 +113,6 @@ resources:
       image: Windows 10
       flavor: cy.large
       networks:
-        - port: { get_resource: port_1 }
         - port: { get_resource: float_port }
       user_data:
         str_replace:
