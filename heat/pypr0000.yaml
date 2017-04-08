@@ -84,7 +84,7 @@ resources:
       fixed_ips:
       - subnet_id: { get_resource: subnetwork0 }
         ip_address: 10.0.0.3
-      security_groups: { get_resource: secgroup0 }
+      security_groups: { get_resource: secgroup_0 }
   
   float_ip_assoc:
     type: OS::Neutron::FloatingIPAssociation
