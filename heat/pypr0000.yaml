@@ -74,7 +74,7 @@ resources:
     type: OS::Neutron::FloatingIP
     depends_on: external_router
     properties:
-      floating_network: Floating Network
+      floating_network: public
 
   float_port:
     type: OS::Neutron::Port
