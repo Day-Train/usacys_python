@@ -3,7 +3,7 @@
 
 = Python Programming Course Objectives
 
-== TLO: Read, write, and analyze Python code.
+=== TLO: Read, write, and analyze Python code.
 
 . Describe the python programming language and common use cases
   - Topics: interpreted vs. compiled, dynamic typing
