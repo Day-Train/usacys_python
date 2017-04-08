@@ -1,0 +1,118 @@
+:doctype: book
+:stylesheet: ../tech.css
+
+= Python Programming Syllabus
+
+'''
+
+== Overview
+
+Your mission this week: learn how to read, write, and analyze Python code.
+
+== Prerequisites
+
+* Familiarity with command line interfaces for both Windows and Linux Operating Systems.
+* The ability to divest oneself of the thought _"I can't do that"_
+* A desire to learn
+
+== Course Objectives
+
+Download from:
+https://git.cybbh.space/programming/python/public/builds/artifacts/master/file/objectives/objs00.pdf?job=genpdf
+
+== Class Hours and Schedule
+
+You are required to be in class Monday through Friday from 0830-1200 and 1300-1630 unless otherwise specified by the instructor. Daily attendance is mandatory. Any exceptions to attendance must be arranged ahead of time through the instructor with absences for emergency purposes only. Any planned absences must be approved by the Cyber School leadership through the appropriate form. This is not a time to schedule appointments, meetings, or vacation. In the event you do miss an exercises, quiz, or exam, you will be expected to come in early or stay after normal class hours to make it up. If there is an emergency that will prevent you from attending class, you must contact your class leader and instructor at your soonest opportunity. Missing over the TRADOC regulated number of hours will result in an administrative withdrawal from class and the need to reenroll in the class from the start.
+
+_*Students can miss no more than 2 hours of class before being administratively widthrawn.*_
+
+.Schedule (subject to change)
+[cols="a,a,a,a,a",options="header"]
+|===
+|Day 1 (MON) |Day 2 (TUE) |Day 3 (WED) |Day 4 (THU) |Day 5 (FRI)
+
+|
+[float]
+----
+OBJ 1
+OBJ 2
+----
+|
+[float]
+----
+Day 2 Quiz
+OBJ 3
+OBJ 4
+OBJ 5
+----
+|
+[float]
+----
+Day 3 Quiz
+OBJ 6
+OBJ 7
+OBJ 8
+----
+|
+[float]
+----
+Day 4 Quiz
+OBJ 9
+Work on Demo
+----
+|
+[float]
+----
+Demo Program
+Test
+----
+|===
+
+== Assessment Criteria
+
+Students will demonstrate learning through class participation, quizzes, code demonstration, and an end-of-module test. For the quizzes and test, students may not use reference materials or external input of any kind ('closed book/resource'). 
+
+If a student fails a quiz or exam, they will be given the opportunity to retake it, but will only receive a recorded score of 70% if they pass the retake. If the student fails the retake quiz or exam, the student will be counseled and may be administratively withdrawn from the class at the discretion of Cyber School leadership.
+
+Students must present a code demonstration for the rest of the class. The demonstration  is a GO/NOGO event. Students who prepare and present at a high level of excellence with code that shows strong and theoretically sound knowledge and ability will have the opportunity to earn additional recognition on their overall course academic evaluation report (AER; DA 1059).
+
+Students must achieve an overall score of 70% to pass the module. Cyber School leadership reserves the right to administratively withdraw students who fail to maintain class standards at any point in the class.
+
+.Grading Breakdown
+[options="header"]
+|===
+|Event  |Percentage
+
+|Quizzes |60%
+ 
+|Demo    |GO/NOGO
+
+|Test    |40%
+|===
+
+== Academic Integrity
+
+Students must understand and adhere to basic tenets of academic integrity. The following activities are prohibited:
+* Copying, saving, or distributing prompts or answers for activities, quizzes, or tests
+* Disclosing course materials to personnel outside of the course
+* Discussing quizzes or tests with any personnel at any time
+* Collaborating on graded work to include quizzes, the code demonstration, or the test
+* Attempting to alter, harm, or destroy shared resources or infrastructure
+* Posting resources to shared infrastructure
+* Using unauthorized software or packages
+
+The above list is not all-inclusive. Cheating and integrity violations will be handled at the discretion of Cyber School leadership. Students found guilty of these violations face being administratively dropped from the course for misconduct and may be subject to prosecution under UCMJ.
+
+== Support and assistance
+
+Students who struggle with the Python programming concepts are encouraged to engage help on non-graded events through their instructors and fellow students. Students are encouraged to ask for clarification on graded events from their instructors.
+
+In addition to in-class assistance, students may access the suggested resources to read more about Python programming. Students may not plagiarize code from these websites.
+
+* "The Python Tutorial." Internet: https://docs.python.org/3/tutorial/index.html, March 26, 2017 [April 8, 2017]. 
+* A.B. Downey. (2012, August 20). _Think Python: How to Think Like a Computer Scientist_. (version 2.0.17). [On-line]. Available: http://www.greenteapress.com/thinkpython/html/index.html [April 8, 2017].
+* C. Severance. (2013, September 2). _Python for Informatics: Exploring Information_. (version 2.7.0). [On-line]. Available: http://www.pythonlearn.com/html-270 [April 8, 2017].
+* Harrington, Andrew N. (2014, September 8). _Hands-on Python Tutorial_. [On-line]. Available: http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/index.html# [April 8, 2017].
+* J. Elkner, A.B. Downey and C. Meyers. (2012, April 21). _How to Think Like a Computer Scientist_. (2nd edition). [On-line]. Available: http://www.openbookproject.net/thinkcs/python/english2e/ [April 8, 2017].
+
+'''
