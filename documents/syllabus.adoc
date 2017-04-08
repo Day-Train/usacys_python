@@ -78,10 +78,12 @@ Students must present a code demonstration for the rest of the class. The demons
 Students must achieve an overall score of 70% to pass the module. Cyber School leadership reserves the right to administratively withdraw students who fail to maintain class standards at any point in the class.
 
 {empty} +
+{empty} +
+{empty} +
 
 === Grading Breakdown
 
-[cols=">s,e",frame="topbot",options="header",width="25%"]
+[cols=">s,e",frame="topbot",options="header",width="30%"]
 |===
 |Event   |Percentage
 |Quizzes |60%
