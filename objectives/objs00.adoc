@@ -28,7 +28,7 @@
 . Incorporate a variety of data structures
   - Topics: lists, stacks, queues 
   - Bloom's Levels 4-6: Create, Analyze, and Evaluate
-  - Assessed via Day 4 Quiz
+  - Assessed via Day 3 Quiz
 
 . Integrate functions within programs
   - Topics: functional decomposition, code reuse
@@ -38,15 +38,15 @@
 . Create program that performs input and output
   - Topics: input parameters versus user input/interaction, read and write objects, write to memory
   - Bloom's Level 3: Application
-  - Assessed via Day 5 Quiz
+  - Assessed via Day 4 Quiz
 
 . Demonstrate an ability to work with external libraries
   - Topics: understand modules and packages, import and use modules
   - Bloom's Level 3: Application
-  - Assessed via Day 5 Quiz
+  - Assessed via Day 4 Quiz
   
 . Assess program functionality and recommend improvements
   - Topics: interpret and analyze code, error handling
   - Bloom's Levels 4 and 5: Analyze and Evaluate
-  - Assessed via Final Exam
+  - Assessed via End-of-Module Test
   
