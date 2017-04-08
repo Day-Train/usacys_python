@@ -16,7 +16,7 @@ parameters:
     description: First Name
     default:
     constraints:
-      - length: { min: 1, max 15 }
+      - length: { min: 1, max: 15 }
         description: First name must be no longer than 15 characters
       - allowed_pattern: "[a-zA-Z]*"
         description: First name may only contain letters
@@ -27,7 +27,7 @@ parameters:
     description: Last Name
     default:
     constraints:
-      - length: { min: 1, max 15 }
+      - length: { min: 1, max: 15 }
         description: Last name must be no longer than 15 characters
       - allowed_pattern: "[a-zA-Z]*"
         description: Last name may only contain letters
@@ -39,7 +39,7 @@ parameters:
     hidden: true
     default: changeme
     constraints:
-      - length: { min: 8, max 20 }
+      - length: { min: 8, max: 20 }
         description: Password must be between 8 and 20 characters
       - allowed_pattern: "[a-zA-Z0-9]*"
         description: Password may not contain special characters
@@ -51,7 +51,7 @@ parameters:
     hidden: true
     default: changeme
     constraints:
-      - length: { min: 8, max 64 }
+      - length: { min: 8, max: 64 }
         description: Password must be at least 8 characters
       - allowed_pattern: "[a-zA-Z0-9]*"
         description: Password may not contain special characters
