@@ -183,37 +183,63 @@ resources:
             set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server' -name "fDenyTSConnections" -Value 0
             exit 1001
           params:
-            $password: { get_param: root_password }
+            domain_name: 
+              str_replace:
+                template: lastname.prog.mil
+              params:
+                lastname: { get_param: last_name }
+            admin_password: { get_param: safe_mode_administrator_password }
+            ip_address:
+              str_replace:
+              template: 10.studentID.0.2
+              params:
+                studentID: { get_param: student_id }
+            dGateway:
+              str_replace:
+                template: 10.studentID.0.254
+                params:
+                  studentID: { get_param: student_id }
+            DNSserver:
+              str_replace:
+                template: 10.studentID.0.1
+                params:
+                  studentID: { get_param: student_id }
             win10Hostname:
               str_replace:
                 template: lastname-win10
                 params:
                   lastname: { get_param: last_name }
-      user_data_format: RAW
 
   server1:
     type: OS::Nova::Server
     properties:
       name:
         str_replace: 
-          template: 
+          template: lastname-debian 
           params:
             lastname: { get_param: last_name }
-      image: Windows 10
-      flavor: cy.large
+      image: Debian LXDE
+      flavor: cy.medium
       networks:
         - network: { get_resource: stu-network }
       security_groups: 
         - { get_resource: stu-sec-group-dc }
       user_data:
         str_replace:
-          template:
-
+          template: | 
+            #!/bin/bash
+            echo "root:$password" | chpasswd
+            reboot
           params:
             $password: { get_param: root_password }
-            win10Hostname:
+            debianHostname:
               str_replace:
-                template: lastname-win10
+                template: lastname-debian
                 params:
                   lastname: { get_param: last_name }
       user_data_format: RAW      
+      
+outputs:
+  floating_ip:
+    description: Windows 10 Jump Box floating IP for RDP Access
+    value: { get_attr: [stu-float-ip, floating_ip_address] }
