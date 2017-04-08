@@ -166,8 +166,8 @@ resources:
     type: OS::Nova::Server
     properties:
       name:
-        str_replace: lastname-win10
-          template: 
+        str_replace: 
+          template: lastname-win10
           params:
             lastname: { get_param: last_name }
       image: Windows 10
