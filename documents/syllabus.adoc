@@ -22,7 +22,7 @@ https://git.cybbh.space/programming/python/public/builds/artifacts/master/file/o
 
 You are required to be in class Monday through Friday from 0830-1200 and 1300-1630 unless otherwise specified by the instructor. Daily attendance is mandatory. Any exceptions to attendance must be arranged ahead of time through the instructor with absences for emergency purposes only. Any planned absences must be approved by the Cyber School leadership through the appropriate form. This is not a time to schedule appointments, meetings, or vacation. In the event you do miss an exercises, quiz, or exam, you will be expected to come in early or stay after normal class hours to make it up. If there is an emergency that will prevent you from attending class, you must contact your class leader and instructor at your soonest opportunity. Missing over the TRADOC regulated number of hours will result in an administrative withdrawal from class and the need to reenroll in the class from the start.
 
-_*Students can miss no more than 2 hours of class before being administratively widthrawn.*_
+*_Students can miss no more than 2 hours of class before being administratively widthrawn._*
 
 === Schedule (subject to change)
 
@@ -77,7 +77,8 @@ Students must present a code demonstration for the rest of the class. The demons
 
 Students must achieve an overall score of 70% to pass the module. Cyber School leadership reserves the right to administratively withdraw students who fail to maintain class standards at any point in the class.
 
-.Grading Breakdown
+=== Grading Breakdown
+
 [cols="^,^",options="header"]
 |===
 |Event  |Percentage
@@ -92,6 +93,7 @@ Students must achieve an overall score of 70% to pass the module. Cyber School l
 == Academic Integrity
 
 Students must understand and adhere to basic tenets of academic integrity. The following activities are prohibited:
+
 * Copying, saving, or distributing prompts or answers for activities, quizzes, or exams
 * Disclosing course materials to personnel outside of the course
 * Discussing quizzes or exams with any personnel at any time
