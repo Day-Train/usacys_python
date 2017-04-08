@@ -63,14 +63,14 @@ Work on Demo
 |
 [float]
 ----
-Demo Program
-Test
+Code Demonstration
+End-of-module Exam
 ----
 |===
 
 == Assessment Criteria
 
-Students will demonstrate learning through class participation, quizzes, code demonstration, and an end-of-module test. For the quizzes and test, students may not use reference materials or external input of any kind ('closed book/resource'). 
+Students will demonstrate learning through class participation, quizzes, code demonstration, and an end-of-module exam. For the quizzes and exam, students may not use reference materials or external input of any kind ('closed book/resource'). 
 
 If a student fails a quiz or exam, they will be given the opportunity to retake it, but will only receive a recorded score of 70% if they pass the retake. If the student fails the retake quiz or exam, the student will be counseled and may be administratively withdrawn from the class at the discretion of Cyber School leadership.
 
@@ -87,16 +87,16 @@ Students must achieve an overall score of 70% to pass the module. Cyber School l
  
 |Demo    |GO/NOGO
 
-|Test    |40%
+|Exam    |40%
 |===
 
 == Academic Integrity
 
 Students must understand and adhere to basic tenets of academic integrity. The following activities are prohibited:
-* Copying, saving, or distributing prompts or answers for activities, quizzes, or tests
+* Copying, saving, or distributing prompts or answers for activities, quizzes, or exams
 * Disclosing course materials to personnel outside of the course
-* Discussing quizzes or tests with any personnel at any time
-* Collaborating on graded work to include quizzes, the code demonstration, or the test
+* Discussing quizzes or exams with any personnel at any time
+* Collaborating on graded work to include quizzes, the code demonstration, or the exam
 * Attempting to alter, harm, or destroy shared resources or infrastructure
 * Posting resources to shared infrastructure
 * Using unauthorized software or packages
