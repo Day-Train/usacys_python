@@ -5,9 +5,7 @@
 
 '''
 
-== Overview
-
-Your mission this week: learn how to read, write, and analyze Python code.
+==== Your mission this week: *Learn how to read, write, and analyze Python code.*
 
 == Prerequisites
 
@@ -26,7 +24,8 @@ You are required to be in class Monday through Friday from 0830-1200 and 1300-16
 
 _*Students can miss no more than 2 hours of class before being administratively widthrawn.*_
 
-.Schedule (subject to change)
+=== Schedule (subject to change)
+
 [cols="a,a,a,a,a",options="header"]
 |===
 |Day 1 (MON) |Day 2 (TUE) |Day 3 (WED) |Day 4 (THU) |Day 5 (FRI)
@@ -79,7 +78,7 @@ Students must present a code demonstration for the rest of the class. The demons
 Students must achieve an overall score of 70% to pass the module. Cyber School leadership reserves the right to administratively withdraw students who fail to maintain class standards at any point in the class.
 
 .Grading Breakdown
-[options="header"]
+[cols="^,^",options="header"]
 |===
 |Event  |Percentage
 
