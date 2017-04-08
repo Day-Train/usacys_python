@@ -95,7 +95,7 @@ resources:
   port_1: 
     type: OS::Neutron::Port
     properties:
-      newtork_id: { get_resource: network0 }
+      network_id: { get_resource: network0 }
       fixed_ips:
         - subnet_id: { get_resource: subnetwork0 }
           ip_address: 10.0.0.1
