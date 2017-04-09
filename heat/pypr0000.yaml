@@ -121,6 +121,8 @@ resources:
             $ErrorActionPreference = 'SilentlyContinue'
             netsh advfirewall set allprofiles state off
             set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server' -name "fDenyTSConnections" -Value 0
+            (new-object System.Net.WebClient).DownloadFile('https://download.mozilla.org/?product=firefox-52.0.2-SSL&os=win64&lang=en-US','C:\firefox.exe')
+            & c:\firefox.exe -ms
             (new-object System.Net.WebClient).DownloadFile('https://notepad-plus-plus.org/repository/6.x/6.9.2/npp.6.9.2.Installer.exe','C:\npp.exe')
             & c:\npp.exe /S
             (new-object System.Net.WebClient).DownloadFile('https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.68-installer.msi','C:\putty.msi')
