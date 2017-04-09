@@ -19,7 +19,12 @@
   - Topics: integers, strings, floats, objects
   - Bloom's Levels 2, 4, and 6: Understand, Analyze, and Create
   - Assessed via Day 3 Quiz
-  
+ 
+. Create programs that perform input and output
+  - Topics: input parameters versus user input/interaction, read and write objects, write to memory
+  - Bloom's Level 3: Application
+  - Assessed via Day 3 Quiz
+ 
 . Integrate functions within programs
   - Topics: functional decomposition, code reuse
   - Bloom's Levels 4 and 6: Design and Analyze
@@ -28,11 +33,6 @@
 . Analyze ways to control program flow
   - Topics: Conditionals, Control Flow, Loops
   - Bloom's Levels 4-6: Create, Analyze, and Evaluate 
-  - Assessed via Day 3 Quiz
-
-. Create programs that perform input and output
-  - Topics: input parameters versus user input/interaction, read and write objects, write to memory
-  - Bloom's Level 3: Application
   - Assessed via Day 4 Quiz
   
 . Incorporate a variety of data structures
