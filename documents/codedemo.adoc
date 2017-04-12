@@ -3,7 +3,9 @@
 
 = Python Final Exercise: Code Demonstration
 
-Using Python, choose one of the options below. You may approach your design either top-down or bottom-up. Explain the functional decomposition and identify which parts of the code (if any) you did not write. For code that is not your own, provide an ieee reference as a comment following the IEEE citation reference:
+Using Python, choose one of the options below. You may approach your design either top-down or bottom-up. Explain the functional decomposition and identify which parts of the code (if any) you did not write. 
+
+For code that is not your own, provide a citation as an inline comment following the IEEE citation reference format (most likely you will want to use the online sources examples):
 
 https://www.ieee.org/documents/ieeecitationref.pdf
 
