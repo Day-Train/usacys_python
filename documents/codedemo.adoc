@@ -20,10 +20,11 @@ Examples of high aptitude in learning or in depth of knowledge and ability in Py
 * Propose another solution besides the first two choices
 . Create a pop up that, once the user accepts, downloads a payload from a python server. Write a key logger payload.
 . Create a password cracker that attacks FTP servers, SSH logins, and password-protected files
-. Encrypt and decrypt a file using the XOR cipher. Read an input file in binary, perform XOR on each byte, and write the encrypted output to a separate file.
+. Encrypt and decrypt a file using the XOR cipher with a many-time-pad key of any length. Read an input file in binary, perform XOR on each byte, and write the encrypted output to a separate file.
 . Encode and decode a file depending on user input. Your program will take two inputs, one for file and the other for algorithm type, and will output a new file. The user may select from 20 different baseX algorithms (base2, base16, base32, base64, etc)
 . Write a web scraping program that, given a link, downloads the contents of the website and repeats the process for all clickable links in the webpage. The program will store individual output files per site in an organized directory structure. The program should acknowledge (but not investigate) repeat links.
 
 ==== If your code doesn't quite work...
 * Be able to describe how your program is structured and which parts don't work, along with a brief analysis of what it might take to troubleshoot the errors.
 * If possible, comment out the code that does not work and demonstrate the functionally decomposed parts that do work.
+* For code that does not work, you should at least demonstrate that your algorithm for solving the problem is complete.
