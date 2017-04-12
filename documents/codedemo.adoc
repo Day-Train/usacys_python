@@ -4,8 +4,11 @@
 = Python Final Exercise: Code Demonstration
 
 Using Python, choose one of the options below. You may approach your design either top-down or bottom-up. Explain the functional decomposition and identify which parts of the code (if any) you did not write. For code that is not your own, provide an ieee reference as a comment following the IEEE citation reference:
+
 https://www.ieee.org/documents/ieeecitationref.pdf
+
 You will submit your code on blackboard and present it on the afternoon of Day 5. Plan no more than 5-7 minutes total, with around 3 minutes of explanation and 2-4 minutes of demonstrating the code.
+
 Examples of high aptitude in learning or in depth of knowledge and ability in Python will be recommended for recognition on the course Academic Evaluation Report.
 
 == Code Demo Options
@@ -19,6 +22,6 @@ Examples of high aptitude in learning or in depth of knowledge and ability in Py
 . Encode and decode a file depending on user input. Your program will take two inputs, one for file and the other for algorithm type, and will output a new file. The user may select from 20 different baseX algorithms (base2, base16, base32, base64, etc)
 . Write a web scraping program that, given a link, downloads the contents of the website and repeats the process for all clickable links in the webpage. The program will store individual output files per site in an organized directory structure. The program should acknowledge (but not investigate) repeat links.
 
-== If your code doesn't quite work...
+==== If your code doesn't quite work...
 * Be able to describe how your program is structured and which parts don't work, along with a brief analysis of what it might take to troubleshoot the errors.
 * If possible, comment out the code that does not work and demonstrate the functionally decomposed parts that do work.
