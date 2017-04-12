@@ -62,8 +62,8 @@ Work on Demo
 |
 [float]
 ----
-Code Demonstration
 End-of-module Exam
+Code Demonstration
 ----
 |===
 
