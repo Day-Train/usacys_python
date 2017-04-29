@@ -1,0 +1,32 @@
+Exercise 2_1: To Catch a Packet
+
+Exercise Summary:
+Packet sniffers are a essential tool for both offensive and defensive cyber activities.  They are useful for troubleshooting problems with network related programs.  Additionally, they can be used to monitor traffic passing over a network to ensure safe operations and to document activities performed during a pentest.
+
+This exercise will detail building a simple, flat Python script capable of capturing a single packet and relaying the contents of it.  This initial python script will evolve into a more complicated project as we progress through the basics of Python objects.
+
+Learning Objectives:
+2.	Designing Python Scripts
+2.1.	Basic Data Structures (list, dict, tuple, etc)
+2.2.	Flow Control (loops, functions)
+
+Narrative:
+A basic Python script is parse by the Python interpreter from the top down.  However, it is bad practice to write scripts that fail to implement at least a basic amount of flow control.  As we progress into more complicated scripts, we will maintain a basic framework for our scripts that allows the interpreter to parse the entire contents of the Python script before executing any custom logic.
+
+In this exercise, we will be using a basic Python script shell to implement this logic.
+
+Instructions:
+1)	Read over the Python 2 Standard Library socket module.  Look for examples of creating a packet sniffer in Python.  What requirements would a program like this have when running on an operating system?
+2)  Using the provided ex2_1_1 skeleton, create a script that can capture a packet and output the contents of it to stdout.
+3)
+
+Materials:
+1)	ex2_1_1.py
+2)  ex2_1_server.py (depends if openstack network is functional or not)
+
+References:
+-	S. Moon, “Code a network packet sniffer in python for Linux,” BinaryTides, 29-Nov-2011. [Online]. Available: http://www.binarytides.com/python-packet-sniffer-code-linux/. [Accessed: 13-Mar-2017].
+-   “17.2. socket — Low-level networking interface¶,” 17.2. socket - Low-level networking interface — Python 2.7.13 documentation. [Online]. Available: https://docs.python.org/2/library/socket.html. [Accessed: 13-Mar-2017].
+
+Instructor Notes:
+1)  When using a RAW_SOCK in Python, the script itself has to be executed with root/admin privileges.

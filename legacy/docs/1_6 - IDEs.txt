@@ -1,0 +1,23 @@
+Exercise 1_6: All Hail the IDEs
+
+Exercise Summary:
+There comes a time in the life of every programmer when notepad no longer provides enough features to quickly develop complicated code.  It is at this point that the Integrated Development Environment (IDE) programs come into play.  These IDEs are programs that automate many of the tasks associated with building scripts.
+
+Learning Objectives:
+1.3.	Working with IDEs
+
+Narrative:
+IDEs are like sports teams, every programmer has a favorite and is willing to spend hours telling you why theirs is better than yours.  The reality is that most of the popular IDEs on the market these days accomplish the same tasks.  For Python, one of the most popular IDEs is PyCharm.  This IDE has the ability to integrate with conda and virtualenv, work with advanced Python frameworks like Django, handle code debugging, and incorporate iPython features into development.  In this exercise, we will be exploring a couple of these features to get you familiar with the environment.
+
+Instructions:
+1)	Load up PyCharm and create a new Python2.7 conda environment named ex1_6.
+2)  Open the ex1_6_1.py script
+
+Materials:
+1)	ex1_6_1.py
+
+References:
+-	“Quick Start Guide,” Quick start with PyCharm. [Online]. Available: https://www.jetbrains.com/help/pycharm/2016.3/quick-start-guide.html. [Accessed: 17-Mar-2017].
+
+Instructor Notes:
+

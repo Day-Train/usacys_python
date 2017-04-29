@@ -1,0 +1,26 @@
+Lesson 3: Writing Python Scripts
+
+Lesson Purpose:
+In this lesson students will be writing scripts from scratch.  They will explore some basic scripting challenges such as file handling, dealing with user input, and writing network capable scripts.  Additionally, they will spend some time learning about regular expressions and how to write efficient regex lines.
+
+Learning Objectives:
+3.	Script Writing
+3.1.	File Handling
+3.2.	User Input
+3.3.	Networking
+3.4.	REGEX
+
+Required Resources:
+-	Linux IDE VM
+
+Pre-Reading:
+-	Coming soon
+
+Exercises:
+
+3.1 - FOUR!
+3.2 -
+
+
+References:
+

@@ -1,0 +1,26 @@
+Exercise 1_5: My Python is Better than yours
+
+Exercise Summary:
+Python has forked into two different communities, those who support Python2 and those who support Python3.  There are some distinct differences between the two versions, so it is important to know which version your script was written for.
+
+Learning Objectives:
+1.2.	Python 2.7 vs 3
+
+Narrative:
+Follow the instructions to explore some of the differences between Python2 and Python3.
+
+Instructions:
+1)  Conduct research into some of the differences between Python2 and 3.  Discuss.
+2)  Try executing ex1_5_1.py, figure out how to make it work
+3)  Extract ex1_5_2.zip, execute both of the scripts on the provided text file, discuss the differences.
+
+Materials:
+1)	ex1_5_1.py
+2)  ex1_5_2.zip
+
+References:
+-   S. Raschka, “The key differences between Python 2.7.x and Python 3.x with examples,” Sebastian Raschka's Website, 01-Jun-2014. [Online]. Available: http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html. [Accessed: 11-Mar-2017].
+
+Instructor Notes:
+2)  ex1_5_1.py is using Python3 string statements in a Python2 and requires the futures import statement at the top to function correctly.
+3)  ex1_5_2.zip contains a file parser in both Python2 and 3.  The text contains unicode which Python3 uses by default, and errors out when using Python2.
