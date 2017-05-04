@@ -28,7 +28,7 @@ You are required to be in class Monday through Friday from 0830-1200 and 1300-16
 
 [cols="a,a,a,a,a",options="header"]
 |===
-|Day 1 (MON) |Day 2 (TUE) |Day 3 (WED) |Day 4 (THU) |Day 5 (FRI)
+|Day 1 (THU) |Day 2 (FRI) |Day 3 (MON) |Day 4 (TUE) |Day 5 (WED)
 
 |
 [float]
