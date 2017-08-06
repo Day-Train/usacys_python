@@ -1,7 +1,9 @@
 :doctype: book
 :stylesheet: ../tech.css
 
-= Python Programming Course Objectives
+= Python Programming Objectives
+
+// Available at https://git.cybbh.space/programming/python/public/builds/artifacts/master/file/objectives/pythonObjectives.pdf?job=genpdf
 
 === TLO: Read, write, and analyze Python code.
 
