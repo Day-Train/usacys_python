@@ -28,7 +28,7 @@ You are required to be in class Monday through Friday from 0830-1200 and 1300-16
 
 [cols="a,a,a,a,a",options="header"]
 |===
-|Day 1 (MON) |Day 2 (TUE) |Day 3 (WED) |Day 4 (THU) |Day 5 (FRI)
+|Day 1 (THU) |Day 2 (FRI) |Day 3 (MON) |Day 4 (TUE) |Day 5 (WED)
 
 |
 [float]
@@ -117,5 +117,7 @@ In addition to in-class assistance, students may access the suggested resources 
 * A.B. Downey. (2012, August 20). _Think Python: How to Think Like a Computer Scientist_. (version 2.0.17). [On-line]. Available: http://www.greenteapress.com/thinkpython/html/index.html [April 8, 2017].
 * C. Severance. (2013, September 2). _Python for Informatics: Exploring Information_. (version 2.7.0). [On-line]. Available: http://www.pythonlearn.com/html-270 [April 8, 2017].
 * A.N. Harrington. (2014, September 8). _Hands-on Python Tutorial_. [On-line]. Available: http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/index.html# [April 8, 2017].
+* Python Software Foundation. (2017, March 26). _An Informal Introduction to Python_. [On-line]. Availble: https://docs.python.org/3/tutorial/introduction.html [May 5, 2017].
+
 
 '''
