@@ -8,7 +8,7 @@ import random
 import io
 import re
 
-import solution as student
+import deliverable as student
 
 class PE1_5(unittest.TestCase):
 
