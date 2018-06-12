@@ -1,24 +1,38 @@
 #!/usr/bin/env python3
 
-def encode_pgm(msg,coverfilename,outputfilename):
-    '''Encodes a message in a PGM file
+def read_pgm(filename):
+    '''Reads a PGM file
     Args:
-        msg (str): the message to encode
-        coverfilename (str): the name of the PGM file on disk to use as the cover
-        outputfilename (str): the name of the new PGM file to write
+        filename (str): the file name of a PGM file on disk to read from
+    Returns:
+        tuple:
+            1st element is a list of PGM header values as strings
+            2nd element is a list of pixel intensities as strings
+    '''
+    pass
+
+def write_pgm(filename,content):
+    '''Writes a PGM file
+    Args:
+        filename (str): the file name to be used for the written file
+        content (tuple):
+            1st element is a list of PGM header values as strings
+            2nd element is a list of pixel intensities as strings
     Returns:
         None
     '''
     pass
 
-def decode_pgm(filename):
-    '''Decodes a message hidden in a PGM file
+def invert(content):
+    '''Modifies the pixel intensities of the given content to be inverted
     Args:
-        filename (str): the name of the PGM file that contains a hidden message
+        content (tuple):
+            1st element is a list of PGM header values as strings
+            2nd element is a list of pixel intensities as strings
     Returns:
-        str: the message that was encoded in the PGM file
+        None
     '''
-    pass
+
 
 if __name__ == '__main__':
 	pass
