@@ -10,7 +10,7 @@ import re
 import contextlib
 import nlp
 
-import deliverable as student
+import solution as student
 
 class PE1_7(unittest.TestCase):
 
@@ -41,5 +41,9 @@ anzrfcnprf ner bar ubaxvat terng vqrn -- yrg'f qb zber bs gubfr!\n'''
         s = nlp.similarity(answered_vsm,self.vsm_correct)
         self.assertTrue(s > 0.80)
     
+    def test_prompt(self):
+        pass
+        #with unittest.mock.patch('builtins.input',
+        
 if __name__ == '__main__':
     unittest.main()

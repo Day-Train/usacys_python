@@ -37,8 +37,13 @@ class PE1_5(unittest.TestCase):
 
         self.msg = 'at'
 
+    def encode(self,msg,cover):
+        '''DO NOT use this code in your solution. And don't write production code that looks like this ;)'''
+        return list(map(str,[x if i >= 8*len(msg) else (x | ((ord(msg[i//8]) & (0x80 >> (i%8))) >> 7-(i%8))) for i,x in enumerate(map(int,cover))]))
+
     def test_decode_pgm(self):
-        fp = io.StringIO(self.stegdata)
+        stegdata = '\n'.join(self.stegheader + self.encode(self.msg+student.sentinel(),self.coverpixels))
+        fp = io.StringIO(stegdata)
         with unittest.mock.patch('builtins.open',return_value=fp):
             answered = student.decode_pgm(self.stegname)
             self.assertEqual(answered,self.msg)
@@ -65,7 +70,8 @@ class PE1_5(unittest.TestCase):
             answered = answered.split()
 
             self.assertEqual(answered[:4],self.stegheader)
-            self.assertEqual(answered[4:],self.stegpixels)
+            correct = self.encode(self.msg+student.sentinel(),self.coverpixels)
+            self.assertEqual(answered[4:],correct)
 
 if __name__ == '__main__':
     unittest.main()

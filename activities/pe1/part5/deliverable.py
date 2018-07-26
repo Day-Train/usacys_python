@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+def sentinel():
+    return chr(128)
+
 def encode_pgm(msg,coverfilename,outputfilename):
     '''Encodes a message in a PGM file
     Args:

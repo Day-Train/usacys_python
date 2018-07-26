@@ -8,13 +8,10 @@ This is the second of a series of PEs that will arm you with the skills to build
 
 Least Significant Bit (LSB) steganography is a technique to hide data by spreading the data's bits over multiple bytes within what's called the *cover*. The cover is typically an image whereby modifying single bits within the pixels results in slight color or intensity changes that are very hard to visually detect. This is done by placing the first bit of the data in the right-most (LSB) bit of the first byte of the cover. Then the second bit of the data is placed in the right-most bit (LSB) of the second byte of the cover. This is repeated until all of the data is spread across the bytes of the cover.
 
+[.standard,width="100%",cols="a,a,a,a,a,a,a,a,a,a,a"]
 |=====
 |Character|ASCII|MSB|||||||LSB|
 |`'a'`|97|0|1|1|0|0|0|0|1|
-|=====
-
-[cols="a,a,a,a,a,a,a,a,a,a,a"]
-|=====
 |Original (Decimal) | Binary |||||||||Stego (Decimal)
 |250|11111010 |11111010 ||||||||250
 |251|11111011||11111011|||||||251

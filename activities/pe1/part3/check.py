@@ -7,7 +7,7 @@ import pathlib
 import random
 import io
 
-import deliverable as student
+import solution as student
 
 class PE1_3(unittest.TestCase):
 
