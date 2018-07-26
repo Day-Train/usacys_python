@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 def invert(l):
     '''Inverts the given list
     Args:
@@ -9,6 +10,7 @@ def invert(l):
     '''
     pass
 
+
 def inverted(l):
     '''Returns a new list that is the given list inverted
     Args:
@@ -17,6 +19,7 @@ def inverted(l):
         list: new list that is the given list inverted
     '''
     pass
+
 
 if __name__ == '__main__':
     pass
