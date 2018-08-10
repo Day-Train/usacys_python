@@ -10,7 +10,7 @@ import re
 import contextlib
 import nlp
 
-import solution as student
+import deliverable as student
 
 class PE1_7(unittest.TestCase):
 
