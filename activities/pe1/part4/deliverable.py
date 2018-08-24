@@ -32,7 +32,7 @@ def invert(content):
     Returns:
         None
     '''
-
+    pass
 
 if __name__ == '__main__':
 	pass
