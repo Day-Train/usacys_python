@@ -19,7 +19,7 @@ class PE1_7(unittest.TestCase):
         with contextlib.redirect_stdout(f):
             import this
         self.vsm_correct = nlp.vsm(f.getvalue())
-        with open('100-0.txt') as fp:
+        with open('100-0.txt',encoding='utf-8') as fp:
             self.train = fp.read()
         self.ciphertext = '''gur mra bs clguba, ol gvz crgref\n\nornhgvshy vf orggre guna htyl.
 rkcyvpvg vf orggre guna vzcyvpvg.\nfvzcyr vf orggre guna pbzcyrk.
