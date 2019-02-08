@@ -1,0 +1,110 @@
+:doctype: book
+
+== Practical Exercise 2-2
+
+Networking placeholder
+
+'''
+==== *Botnets*
+
+The word *_botnet_* is a combination of the words *_robot_* and *_network_*. It is a logical collection of networked devices whose security has been breached and control ceded to a third party. In this PE you will "infect" computers with a client script (bot) capable of connecting to a server script (command and control). The client will then download and execute arbitrary code provided by the server.
+
+'''
+
+==== *Base 64 Encoding*
+
+Since the design of this botnet architecture is too simple to require a sophisticated application protocol, you don't really need to encode the binary data that will be sent from the server. However, many bots are required to communicate from inside a protected network. This necessitates using a protocol that is often allowed through a firewall like HTTP (which doesn't like binary data).
+
+The data your command and control server sends will be base64 encoded for no other reason than to gain familiarity with more of the Python standard library. Base64 is a way to turn arbitrary binary data into ASCII text for transmission over text based protocols.
+
+* Begin a Python 3 REPL session and enter the code shown below.
+
+----
+>>> import base64
+>>> encoded = base64.encodebytes(b'hello\x80')
+>>> encoded
+b'aGVsbG+A\n'
+>>> base64.decodebytes(encoded)
+b'hello\x80'
+----
+
+'''
+
+==== *Multiprocessing*
+
+Sockets default to blocking behavior. That is, `send` and `recv` do not return until the underlying network buffers are either filled or emptied. Blocking also has the effect of tying up a server socket for the time it takes to handle a connection preventing the server from handling multiple connections at once. While a server is handling a connection, further connections will either have to wait or be outright refused.
+
+To make a server more scalable and capable of handling multiple connections at once, you can use the `multiprocessing` module. Multiprocessing allows a program to spawn child processes to fully leverage multiple processors.
+
+Processes are spawned by creating a `Process` object and then calling its `start()` method.
+
+* Begin a Python3 REPL session and enter the code shown below.
+
+----
+>>> import multiprocessing as mp
+>>> import time
+>>> def func(arg):
+...     time.sleep(1)
+...     print(arg ,mp.current_process().name)
+...
+>>> for _ in range(4)
+...     func('hello from')
+...
+hello from MainProcess
+hello from MainProcess
+hello from MainProcess
+hello from MainProcess
+>>> for _ in range(4):
+...     mp.Process(target=func,args=('hello from',)).start()
+...
+hello from Process-1
+hello from Process-1
+hello from Process-1
+hello from Process-1
+
+>>>
+----
+
+[qanda]
+The first `for` loop executes `func` sequentially 4 times. How long does it take to complete?::
+Each call to `func` has a 1 second time delay, so it takes 4 seconds.
+
+[qanda]
+The second `for` loop executes `func` concurrently in 4 child processes. How long does it take to complete?::
+Provided there are at least 4 processors, it takes roughly 1 second.
+
+'''
+==== *Section 4*
+
+Placeholder
+
+'''
+
+==== *Deliverable*
+
+Modify `deliverable.py` and provide implementations for `client()`, `server()` and `connection_handler()`. When a connection is accepted by the server, hand it off to a child process so that the main process can continue to accept new connections. `connection_handler()` should be the target of each child process and should send `PAYLOAD` to the client.
+
+To check your work using the provided unit tests run `python3 check.py`.
+
+To check your work manually, import `deliverable` into 2 separate REPL sessions and run `deliverable.server()` in one session and `deliverable.client()` in another.
+
+.REPL commands for testing server
+----
+>>> import deliverable
+>>> deliverable.server()
+----
+
+.REPL commands for testing client
+----
+>>> import deliverable
+>>> deliverable.client()
+----
+
+.deliverable.py
+----
+include::deliverable.py[]
+----
+
+'''
+
+*END*
