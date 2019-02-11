@@ -10,11 +10,9 @@ import binascii
 import string
 import utility
 
-#Make this change to your check.py ####################
-#import solution as student
 import deliverable as student
 
-# random.choices added in v3.6
+# random.choices added in v3.6 ######################
 def choices(population,k=1):
     return [random.choice(population) for i in range(k)]
 
@@ -125,7 +123,8 @@ class TestPart1(unittest.TestCase):
                 raise FileNotFoundError
 
         with unittest.mock.patch('builtins.open',side_effect=side_effect) as m:
-            student.encode_pgm(self.msg,self.covername,self.stegname)
+            studentobj = student.Steg()
+            studentobj.encode(self.msg,self.covername,self.stegname)
             answered = stegfp.getvalue()
             self.assertEqual(answered,self.correct_encode())
 
@@ -142,7 +141,8 @@ class TestPart1(unittest.TestCase):
                 raise FileNotFoundError
 
         with unittest.mock.patch('builtins.open',side_effect=side_effect) as m:
-            answered = student.decode_pgm(self.stegname)
+            studentobj = student.Steg()
+            answered = studentobj.decode(self.stegname)
             self.assertEqual(answered,self.msg)
 
 
