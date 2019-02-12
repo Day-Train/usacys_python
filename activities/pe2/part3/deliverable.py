@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
 import socket
-import marshal
-import multiprocessing
-import time
 import base64
 
 def client(connectto='127.0.0.1',port=12345):
