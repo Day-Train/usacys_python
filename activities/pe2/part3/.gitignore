@@ -1,0 +1,7 @@
+# List files that should be excluded from publishing to the public repo
+__pycache__
+solution*.py
+cert.pem
+key.pem
+keygen.sh
+test*.*
