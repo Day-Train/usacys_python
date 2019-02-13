@@ -274,7 +274,7 @@ file, each with its own captured packet.
 === Convenience Functions
 
 [discrete]
-=== [black]#inet_addr#
+=== [black]#inet_aton#
 DESCRIPTION: +
 {nbsp}{nbsp}{nbsp}{nbsp}Converts an ip address from a IPv4 dotted decimal
 notation in str form into binary data in network byte order. +
