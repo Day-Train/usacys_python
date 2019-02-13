@@ -281,7 +281,7 @@ notation in str form into binary data in network byte order. +
 SYNOPSIS:
 [literal]
 .import socket
-def inet_addr(ipaddr)
+def inet_aton(ipaddr)
 
 '''
 [discrete]
