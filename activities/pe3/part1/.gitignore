@@ -1,0 +1,4 @@
+# List files that should be excluded from publishing to the public repo
+__pycache__
+solution*.py
+
