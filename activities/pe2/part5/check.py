@@ -11,7 +11,8 @@ import string
 import math 
 import collections
 
-import solution as student
+#import solution as student
+import deliverable as student
 
 # random.choices added in v3.6
 def choices(population,k=1):
