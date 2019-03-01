@@ -11,7 +11,7 @@ import socket
 import os.path
 
 import deliverable as student
-#import solution as student
+#import solution2 as student
 
 class TestPart1(unittest.TestCase):
     def setUp(self):
