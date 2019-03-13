@@ -14,7 +14,7 @@ def q2(*args):
     TLO: 112-SCRPY006, LSA 3
     TLO: 112-SCRPY007, LSA 4
     Given the variable length argument list, return the average
-    of all the numbers in the list as a float
+    of all the arguments as a float
     '''
     pass
 

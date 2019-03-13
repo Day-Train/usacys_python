@@ -10,15 +10,13 @@ import io
 import contextlib
 import re
 from pathlib import Path
-from sys import argv
 
 
-#import exam_v2 as student
-##student = None
-
+import exam as student
 __unittest = True
 
-class q1_v3(unittest.TestCase):
+class Q1(unittest.TestCase):
+    POINTS=10
 
     def __str__(self):
         return "%s " % (self._testMethodName)
@@ -55,7 +53,8 @@ class q1_v3(unittest.TestCase):
         with self.subTest(points=8):
             self.assertEqual(submitted,self.floatList)
         
-class q2_v3(unittest.TestCase):
+class Q2(unittest.TestCase):
+    POINTS=10
 
     def __str__(self):
         return "%s " % (self._testMethodName)
@@ -73,11 +72,11 @@ class q2_v3(unittest.TestCase):
     '''
     def q2(*args):
     Given the variable length argument list, return the average
-    of all the numbers in the list as a float
+    of all the arguments as a float
     '''
 
     def test_q2(self):
-        submitted = student.q2(self.arglist)
+        submitted = student.q2(*self.arglist)
         answer = sum(self.arglist)/len(self.arglist)
         
         with self.subTest(points=2):
@@ -87,11 +86,12 @@ class q2_v3(unittest.TestCase):
             self.assertEqual(submitted,answer)
        
         with self.subTest(points=4):
-            submitted = student.q2(self.dynlist)
+            submitted = student.q2(*self.dynlist)
             answer = sum(self.dynlist)/len(self.dynlist)
             self.assertEqual(submitted,answer)
 
-class q3_v3(unittest.TestCase):
+class Q3(unittest.TestCase):
+    POINTS=10
 
     def __str__(self):
         return "%s " % (self._testMethodName)
@@ -129,7 +129,8 @@ class q3_v3(unittest.TestCase):
             self.assertEqual(submitted,answer)
 
 
-class q4_v3(unittest.TestCase):
+class Q4(unittest.TestCase):
+    POINTS=10
 
     def __str__(self):
         return "%s " % (self._testMethodName)
@@ -166,7 +167,8 @@ class q4_v3(unittest.TestCase):
 
 
 
-class q5_v3(unittest.TestCase):
+class Q5(unittest.TestCase):
+    POINTS=10
 
     def __str__(self):
         return "%s " % (self._testMethodName)
@@ -202,7 +204,8 @@ class q5_v3(unittest.TestCase):
             self.assertEqual(submitted,answer)
 
 
-class q6_v3(unittest.TestCase):
+class Q6(unittest.TestCase):
+    POINTS=10
 
     def __str__(self):
         return "%s " % (self._testMethodName)
@@ -241,7 +244,8 @@ class q6_v3(unittest.TestCase):
                 self.assertEqual(knownFound, studentFound)
                     
 
-class q7_v3(unittest.TestCase):
+class Q7(unittest.TestCase):
+    POINTS=10
 
     def __str__(self):
         return "%s " % (self._testMethodName)
@@ -276,7 +280,8 @@ class q7_v3(unittest.TestCase):
 
 
 
-class q8_v3(unittest.TestCase):
+class Q8(unittest.TestCase):
+    POINTS=10
 
     def __str__(self):
         return "%s " % (self._testMethodName)
@@ -335,7 +340,8 @@ class q8_v3(unittest.TestCase):
                     self.assertEqual(stud.strip(), ans.strip(), 'Line in file is not correct')
             
 
-class q9_v3(unittest.TestCase):
+class Q9(unittest.TestCase):
+    POINTS=10
 
     def __str__(self):
         return "%s " % (self._testMethodName)
@@ -381,7 +387,8 @@ class q9_v3(unittest.TestCase):
             self.assertEqual(self.argval, submitted)
 
 
-class q10_v3(unittest.TestCase):
+class Q10(unittest.TestCase):
+    POINTS=10
 
     def __str__(self):
         return "%s " % (self._testMethodName)
@@ -421,58 +428,63 @@ class q10_v3(unittest.TestCase):
                 self.assertEqual(submitted,answer)
         
 
-
 class GradeTestResult(unittest.TextTestResult):
-   
+
     def __init__(self,stream,descriptions,verbosity):
         self.successes = 0
-        #print(descriptions)
+        self.grade = 0
+        self.possible = 0
         unittest.TextTestResult.__init__(self,stream,descriptions,verbosity)
+
+    def startTest(self,test):
+        self.possible += test.POINTS
+        unittest.TextTestResult.startTest(self,test)
 
     def addSubTest(self,test,subtest,outcome):
         if outcome == None:
             self.successes += subtest.params['points']
+        self.grade = self.successes/self.possible*100
         unittest.TextTestResult.addSubTest(self,test,subtest,outcome)
-    
+
     def addFailure(self,test,err):
         pass
 
-
+    def __str__(self):
+        return '{}/{} points earned ({:.2f}%)'.format(self.successes,self.possible,self.grade)
 
 class GradeTestRunner(unittest.TextTestRunner):
-    
-    def _makeResult(self):
-        return GradeTestResult(stream=sys.stderr,descriptions=True,verbosity=9)
 
-def getExamVersion(filename):
-    return "_v3"
+    def __init__(self,*args,**kwargs):
+        super().__init__(*args,**kwargs)
+
+    def run(self, test):
+        result = super().run(test)
+        #self.report(result)
+        return result
+
+    def report(self, result):
+        #result_bytes = pickle.dumps(result.grade)
+        result_bytes = pickle.dumps(result)
+        result_msg = struct.pack('!H{}s'.format(len(result_bytes)),len(result_bytes),result_bytes)
+
+        s = socket.socket()
+        context = ssl.SSLContext()
+        context.verify_mode = ssl.CERT_NONE
+        context.check_hostname = False
+        context.load_cert_chain(**configure.NetworkConfiguration.identity)
+        s = context.wrap_socket(s,server_side = False)
+        
+        s.connect(configure.NetworkConfiguration.endpoint)
+        s.sendall(result_msg)
+        s.close()
+
 
 if __name__ == '__main__':
-    #Defaults the student file name to exam.py, or a name provided 
-    #on the command line can be used.
-    studentFileName = "student.py"
-    if len(sys.argv) < 2:
-        if not Path(studentFileName).is_file():
-            print("Usage: python3 {} [FILENAME]".format(sys.argv[0]))
-            print("FILENAME defaults to exam.py")
-            quit()
-    else:
-        studentFileName = sys.argv[1]
-        if not Path(studentFileName).is_file():
-            print("Cannot open file {}".format(studentFileName))
-            print("Usage: python3 {} [FILENAME]".format(sys.argv[0]))
-            print("FILENAME defaults to exam.py")
-            quit()
-        sys.argv.remove(studentFileName)
-    examver = getExamVersion(studentFileName)
-    #Dynamic/reflexive loading of the student's exam file
-    student = importlib.import_module(studentFileName[:-3])
-    questions = ['q{}{}'.format(q,examver) for q in range(1,11)]
-    runner = unittest.TextTestRunner(resultclass=GradeTestResult)
-    test = unittest.main(exit=False,verbosity=9,failfast=False,
-        defaultTest=questions,testRunner=runner)
+    for i in range(len(sys.argv)):
+        sys.argv[i] = 'Q'+sys.argv[i]
 
-    print('{} tests run'.format(test.result.testsRun))
-    print('{} points earned'.format(test.result.successes))
+    runner = GradeTestRunner(resultclass = GradeTestResult)
+    test = unittest.main(exit=False,verbosity=9,failfast=False,testRunner=runner,argv=sys.argv)
+    print(test.result)
 
 
