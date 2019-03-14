@@ -42,10 +42,10 @@ def q5(integer, limit):
     '''
     pass
 
-def q6(lst):
+def q6(f0, f1):
     '''
-    Given a list of integers, return a list with the same elements
-    sorted in ascending order.
+    Given two filenames, return a list whose elements consist of line numbers
+    for which the two files differ.
     '''
     pass
 

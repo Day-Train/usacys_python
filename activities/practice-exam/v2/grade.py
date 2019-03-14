@@ -92,14 +92,41 @@ class Q6(unittest.TestCase):
     POINTS=10
 
     def setUp(self):
-        self.lst = [random.randint(0,100) for _ in range(20)]
+        self.content0 = '''Lorem ipsum dolor sit amet,
+consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident,
+sunt in culpa qui officia deserunt mollit anim id est laborum.'''
+        self.content1 = [list(l) for l in self.content0.splitlines()]
 
-    def correct(self):
-        return sorted(self.lst)
+        linenumbers = [n for n in range(len(self.content1))]
+        random.shuffle(linenumbers)
+        self.correct = set(linenumbers[:3])
+        for _ in range(3):
+            linenumber = linenumbers.pop(0)
+            del self.content1[linenumber][random.randint(0,len(self.content1[linenumber])-1)]
+        self.content1 = '\n'.join([''.join(w) for w in self.content1])
+        self.filenames = ('a.txt','b.txt')
 
     def test_q6(self):
-        with self.subTest(points=10):
-            self.assertEqual(student.q6(self.lst),self.correct())
+        f0 = io.StringIO(self.content0)
+        f1 = io.StringIO(self.content1)
+       
+        def side_effect(filename,mode='r',**kwargs):
+            if filename == self.filenames[0]:
+                return f0
+            elif filename == self.filenames[1]:
+                return f1
+            else:
+                raise FileNotFoundError
+
+        with unittest.mock.patch('builtins.open',side_effect=side_effect) as m:
+            with self.subTest(points=10):
+                submitted = set(student.q6(*self.filenames))
+                self.assertEqual(submitted,self.correct)
+                
 
 class Q7(unittest.TestCase):
     POINTS=10
