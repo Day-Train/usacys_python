@@ -45,7 +45,7 @@ def q5(integer, limit):
 def q6(f0, f1):
     '''
     Given two filenames, return a list whose elements consist of line numbers
-    for which the two files differ.
+    for which the two files differ. The first line is considered line 0.
     '''
     pass
 
