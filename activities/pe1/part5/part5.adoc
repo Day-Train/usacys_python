@@ -32,7 +32,9 @@ Since the data being encoded is alphanumeric text, any value that isn't an ASCII
 
 ==== [black]*Part 2 - Deliverable*
 
-Write a Python script that can hide and recover a message in a PGM file. Your script should implement the following functions. Ensure that the decoded message does not contain garbage characters that weren't in the original message by using a sentinel value. 
+Write a Python script that can hide and recover a message in a PGM file. Your script should implement the following functions. Ensure that the decoded message does not contain garbage characters that weren't in the original message by using a sentinel value.
+
+Code written for parts 3 and 4 is useful in this deliverable. Consider reusing it by copying those deliverables into this activity's directory (renaming them in the process) and importing them as modules.
 
 ----
 include::deliverable.py[]
