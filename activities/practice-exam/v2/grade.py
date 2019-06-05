@@ -9,8 +9,8 @@ import os
 import string
 import io
 
-#import exam as student
-import solution2 as student
+import exam as student
+#import solution2 as student
 
 class Q1(unittest.TestCase):
     POINTS=10

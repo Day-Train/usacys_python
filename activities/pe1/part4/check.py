@@ -39,7 +39,7 @@ class PE1_4(unittest.TestCase):
         mockfileobj.close.return_value = None
         
         with unittest.mock.patch('builtins.open',return_value=mockfileobj) as m:
-            student.write_pgm('sample.pgm',(self.header,self.pixels))
+            student.write_pgm('sample.pgm',(self.header[:],self.pixels[:]))
             
             answered = fp.getvalue()
             answered = list(map(str,answered.split()))
