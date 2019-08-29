@@ -8,6 +8,17 @@ def steg_encode(msg, cover):
     Returns:
         None
     '''
+
+    #Convert msg to char list
+    msglist = list(msg)
+
+    #Conver char list to bin list
+    msglistbin = []
+    for char in msglist:
+        msglistbin.append(format(ord(char),'0>8b'))
+    print(msglistbin)
+
+
     pass
 
 def steg_decode(stego):
@@ -21,3 +32,5 @@ def steg_decode(stego):
 
 if __name__ == '__main__':
 	pass
+
+steg_encode('hello',['250']*16)
