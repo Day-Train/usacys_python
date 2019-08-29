@@ -1,0 +1,10 @@
+python accepts end characters and separators (i.e. replacements for newlines and whitespace)
+
+ex:
+print('fizz',end='')
+>>>fizz>>>
+
+ex:
+print('fizz buzz',sep=':')
+>>>fizz:buzz
+>>>

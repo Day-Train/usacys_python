@@ -1,0 +1,18 @@
+
+How to create virtual environments (VM) using python3:
+
+First create a folder in your home directory to store your VMs.
+cd     #typing cd moves you to your home directory
+mkdir Venv     #I call my location Venv but you can call yours what you like
+cd Venv        #cd into the folder you just created
+python3 -m venv Test  #creates a VM called test.  You will now see a folder called                       Test.
+cd Test        #cd into your VM folder
+source bin/activate     #activate your VM with this command.  Your cursor should
+                         now change to indicate you are using a VM.
+pip list       #run this command to see the modules installed in your VM.
+pip install --upgrade pip    #Always upgrade your version of pip
+pip list       #run this to verify pip was updated
+pip install pycodestyle   #this module will check your code against PEP 8.
+deactivate              #when you are done using your VM, deactivate it.
+
+

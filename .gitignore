@@ -1,3 +1,5 @@
 .bundle
 reveal.js
 __pycache__/
+*.swp
+*.swo
