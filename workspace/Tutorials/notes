@@ -1,0 +1,105 @@
+1. Using a shbang allows the enablement of your .py file as an executable
+
+For example, including the following as line 1 of your file
+line #!/usr/bin/env python3
+
+$ chmod +x hello.py
+$ ./hello.py
+> hello world
+
+#as opposed to:
+
+$ python3 hello.py
+
+2. Formatting:
+$ a = john
+$ b = smith
+$ print(a,b, sep=':')
+> john:smith
+
+$ print('{:.2}'.format(3.1415926))
+> 3.1
+$ print('{:.2f}'.format(3.1415926))
+> 3.14
+
+$ name = 'Jason'.split()
+$ name
+> ['Jason']
+$ b = list(name)
+$ b
+> ['J', 'a', 's', 'o', 'n']
+$ ''.join(b)
+> 'Jason'
+
+$ result = [x for x in range(0,100,5) if x%2 != 0]
+$ result
+> [5, 15, 25, 35, 45, 55, 65, 75, 85, 95]
+
+$ result = sum([x for x in range(2,1001,2)])
+$ result
+> 250500
+
+3. User input:
+
+$ input("Please enter some text: ")
+> Please enter some text: $
+
+4. List operations
+$ s = 'hello'
+$ s[::-1]
+> 'olleh'
+$ s[-1]
+> 'o'
+
+5. String operations
+$ addr = 'alex@gmail.com'
+$ a = addr.split('@')
+$ a 
+> ['alex', 'gmail.com']
+$ b = '.'.join(a)
+$ b
+> alex.gmail.com
+$ ans = b.split('.')
+$ ans
+> ['alex', 'gmail', 'com']
+$ tuple(ans)
+> ('alex', 'gmail', 'com')
+
+$ print('{:,}'.format(4343434343))
+> 4,343,434,343
+
+$ mylist = [1,2,3,4,5,6,7,8]
+$ mylist[-3]
+> 6
+
+6. Arguments
+(*args, **kwargs)
+(*args) -> paacks arguments as a list
+(**kwargs) -> takes a dictionary
+
+7. Working with files
+# Specifiy filename of your choice with the as <filename> keyword
+
+# 'with' keyword enable contextual file closing, otherwise you must
+# explicitcaly call <filename>.close() when you are done working
+# with it
+
+# You can enable different modes, by default read-mode or 'r'
+# 'w' for write mode
+
+$ <with> open('test.txt','<mode: r>') as <filename>
+$   for line in fp:
+$       print(line)
+
+# Alternatively
+$ fp = open("test.txt")
+$ fp.close()
+
+#Other stuff
+$ fp.read(n)            #Reads first n bytes, entire file if empty
+$ fp.readline()
+$ fp.readlines()        #Reads whole file
+$ for line in fp:
+$   ...do something with each line
+$   fp.tell()           #Tell me where I am in the file
+$   fp.seek()           #???

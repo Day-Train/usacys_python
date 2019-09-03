@@ -12,12 +12,18 @@ def steg_encode(msg, cover):
     #Convert msg to char list
     msglist = list(msg)
 
-    #Conver char list to bin list
+    coverlistbin = []
     msglistbin = []
+    
+    #Convert cover values to bit
+    for item in cover:
+        coverlistbin.append(format(int(item), '0>8b'))
+    print(coverlistbin)
+
+    #Convert char list to bin list
     for char in msglist:
         msglistbin.append(format(ord(char),'0>8b'))
     print(msglistbin)
-
 
     pass
 

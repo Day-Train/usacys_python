@@ -1,0 +1,129 @@
+#1. The textfile, travel_plans.txt, contains the summer travel plans for someone with some commentary. Find the total number of characters in the file and save to the variable num.
+
+with open('travel_plans.txt') as fp:
+    num = 0
+    for line in fp:
+        arr = list(line)
+        for item in arr:
+            num += 1
+    print(num)
+    
+###
+    
+num = len(open('travel_plans.txt').read())
+
+#2. We have provided a file called emotion_words.txt that contains lines of words that describe emotions. Find the total number of words in the file and assign this value to the variable num_words.
+
+with open('emotion_words.txt') as fp:
+    num_words = 0
+    for line in fp:
+        arr = line.split()
+        for word in arr:
+            num_words += 1
+    print(num_words)
+    
+###
+    
+num_words = len(open('travel_plans.txt').read().split())
+
+#3. Assign to the variable num_lines the number of lines in the file school_prompt.txt.
+
+with open('school_prompt.txt') as fp:
+    num_lines = 0
+    for line in fp:
+        num_lines += 1
+    print(num_lines)
+    
+###
+    
+num_lines = len(open('travel_plans.txt').readlines())
+
+#4. Assign the first 30 characters of school_prompt.txt as a string to the variable beginning_chars.
+
+with open('school_prompt.txt') as fp:
+    charlist = []
+    for line in fp:
+        linel = list(line)
+        for item in linel:
+            charlist.append(item)
+            
+    beginning_chars = ''.join(charlist[0:30])
+    print(beginning_chars)
+    
+###
+
+beginning_chars = open('shool_prompt.txt').read()[:30]
+
+#5. Using the file school_prompt.txt, assign the third word of every line to a list called three.
+
+with open('school_prompt.txt') as fp:
+    three = []
+    for line in fp:
+        linel = line.split()
+        three.append(linel[2])
+            
+    print(three)
+
+###
+
+three = []
+with open('school_prompt.txt') as fp:
+    for line in fp:
+        three.append(line.split()[2])
+    
+#6. Create a list called emotions that contains the first word of every line in emotion_words.txt.
+
+with open('emotion_words.txt') as fp:
+    emotions = []
+    for line in fp:
+        linel = line.split()
+        emotions.append(linel[0])
+            
+    print(emotions)
+
+###
+
+emotions = []
+with open('emotion_words.txt') as fp:
+    for line in fp:
+        emotions.append(line.split()[0])
+
+
+#7. Assign the first 33 characters from the textfile, travel_plans.txt to the variable first_chars.
+
+with open('travel_plans.txt') as fp:
+    charlist = []
+    for line in fp:
+        linel = list(line)
+        for item in linel:
+            charlist.append(item)
+            
+    first_chars = ''.join(charlist[0:33])
+    print(first_chars)
+
+###
+
+first_chars = open('travel_plans.txt').read()[:33]
+    
+
+#8. Using the file school_prompt.txt, if the character ‘p’ is in a word, then add the word to a list called p_words.
+
+with open('school_prompt.txt') as fp:
+    p_words = []
+    for line in fp:
+        linel = line.split()
+        for item in linel:
+            if 'p' in item:
+                p_words.append(item)
+            
+    print(p_words)
+
+###
+
+p_words = []
+with open('school_prompt.txt') as fp:
+    for line in fp:
+        for word in line.split():
+            if 'p' in word:
+                p_words.append(word)
+
