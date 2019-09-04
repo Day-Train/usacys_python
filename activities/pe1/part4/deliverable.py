@@ -72,7 +72,7 @@ def invert(content):
         inverted.append(str(255 - int(pixel)))
 
     invertedtuple = (content[0],inverted)
-
+    content = invertedtuple
     #return invertedtuple
     pass
 

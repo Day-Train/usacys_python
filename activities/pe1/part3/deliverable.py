@@ -8,17 +8,55 @@ def steg_encode(msg, cover):
     Returns:
         None
     '''
-    coverindex = 0
-    for char in msg:
-        charbin = format(ord(char), '0>8b')
-        for index in range(0,8):
-            coverbinl = list(format(int(cover[coverindex]), '0>8b'))
-            coverbinl[-1] = charbin[coverindex]
-            cover[coverindex] = str(int('',join(coverbinl),2))
-            coverindex += 1
 
+    #Convert msg to char list
+    msglist = list(msg)
 
-       pass
+    coverlistbin = []
+    msglistbin = []
+    
+    #Convert integer values to binary
+    for item in cover:
+        coverlistbin.append(format(int(item), '0>8b'))
+
+    #Convert char list to binary
+    for char in msglist:
+        msglistbin.append(format(ord(char),'0>8b'))
+
+    #For char at index i, position j in msglistbin
+    #Take string at index i in coverlistbin and replace element [-1] with char
+    #char       cover
+    # i,j       i,-1
+    # i,j+1     i+1,-1
+    #...
+    # i,j+7     i+7,-1
+    # i+1,j     i+8,-1
+    #...
+    # i+1,j+7   i+15,-1
+    #...
+    #...
+    # i+n,j+7   i+8*n-1,-1
+
+    #This list will store the modified cover in binary
+    output = []
+
+    i = 0
+    for i in range(len(msglistbin)):
+        k = 0
+        while k < 8:
+            word = coverlistbin[i][0:7] + msglistbin[i][k]
+            output.append(word)
+            k += 1
+        i += 1
+
+    #This list will store the modified cover as integers
+    final = []
+
+    for byte in output:
+        final.append(int(byte,2))
+
+    return final
+    pass
 
 def steg_decode(stego):
     '''LSB decodes a message
@@ -27,20 +65,31 @@ def steg_decode(stego):
     Returns:
         str: message that was decoded
     '''
-    
-    msgbits = []
-    msg = []
-    for b in stego:
-        msgbits.append(bin(int(b))[-1])
-        in len(msgbits == 8:
-            msg.append(chr(int(''.join(msgbits),2)))
-            msgbits = []
-    
-    return ''.join(msg)
-    #return chr(int(''.join(msgbits),2))
+    stegolistbin = []
 
+    for value in stego:
+        stegolistbin.append(format(int(value),'0>8b'))
+
+    msgbin = ''
+
+    i = 0
+    for i in range(len(stego)):
+        msgbin += stegolistbin[i][-1]
+        i += 1
+
+    msglistbin = [msgbin[k:k+8] for k in range(0, len(stego), 8)]
+
+    charnum = []
+    for item in msglistbin:
+        charnum.append(chr(int(item,2)))
+
+    output = ''.join(charnum)
+
+    return output
     pass
 
 if __name__ == '__main__':
 	pass
 
+stego = steg_encode('hello',['250']*40)
+steg_decode(stego)

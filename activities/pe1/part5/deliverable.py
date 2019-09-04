@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+import stego
+import files
+
 def sentinel():
     return chr(128)
 
@@ -12,6 +15,15 @@ def encode_pgm(msg,coverfilename,outputfilename):
     Returns:
         None
     '''
+    
+    #Read file from coverfilename
+    cover = files.read_pgm(coverfilename)
+
+    #Encode message
+    encodedcover = stego.steg_encode(msg,cover[1])
+
+    #Wrote to file
+    files.write_pgm(outputfilename,encodedcover)
     pass
 
 def decode_pgm(filename):
@@ -24,4 +36,5 @@ def decode_pgm(filename):
     pass
 
 if __name__ == '__main__':
-	pass
+    pass
+encode_pgm('hello','plain.pgm','output.pgm')
