@@ -7,6 +7,13 @@ def q1(floatstr):
     floats, return a list with each of the floats in the 
     argument as elements in the list.
     '''
+    
+    mylist = floatstr.split(',')
+    floatlist = []
+    for item in mylist:
+        floatlist.append(float(item))
+
+    return floatlist
     pass
 
 def q2(*args):
@@ -16,6 +23,7 @@ def q2(*args):
     Given the variable length argument list, return the average
     of all the arguments as a float
     '''
+    return sum(args) / len(args)
     pass
 
 def q3(lst,n):
@@ -24,6 +32,7 @@ def q3(lst,n):
     Given a list (lst) and a number of items (n), return a new 
     list containing the last n entries in lst.
     '''
+    return [x for x in lst[len(lst) - n:]]
     pass
     
 def q4(strng):
@@ -33,6 +42,10 @@ def q4(strng):
     Given an input string, return a list containing the ordinal numbers of 
     each character in the string in the order found in the input string.
     '''
+    mylist = []
+    for char in strng:
+        mylist.append(ord(char)-96)
+    return mylist
     pass
 
 def q5(strng):
@@ -42,6 +55,9 @@ def q5(strng):
     Given an input string, return a tuple with each element in the tuple
     containing a single word from the input string in order.
     '''
+    mylist = strng.split()
+    mytuple = tuple(mylist)
+    return mytuple
     pass
 
 def q6():
@@ -50,9 +66,11 @@ def q6():
     Given an input string similar to the below, craft a regular expression  
     pattern to match and extract the date, time, and temperature in groups  
     and return this pattern. Samples given below.
-    Date: 12/31/1999 Time: 11:59 p.m. Temperature: 44 F
+    Date: 12/31/1999 Time: 11:59 p.m. Temperature: 44 F
     Date: 01/01/2000 Time: 12:01 a.m. Temperature: 5.2 C
     '''
+    
+    
     pass
 
 def q7(filename):
@@ -61,6 +79,10 @@ def q7(filename):
     Given a filename, open the file and return the length of the first line 
     in the file excluding the line terminator.
     '''
+    with open(filename) as fp:
+        length = len(fp.readline()) - 1
+    
+    return length
     pass
 
 def q8(filename,lst):
@@ -73,6 +95,13 @@ def q8(filename,lst):
     the list. If "stop" is not found in the list, write the entire list to 
     the file on separate lines.
     '''
+    with open(filename, 'w') as fp:
+        for item in lst:
+            if item.lower() != 'stop':
+                fp.write(item)
+            else:
+                break
+
     pass
 
 def q9(miltime):
@@ -97,3 +126,4 @@ def q10(numlist):
     '''
     pass
 
+q4('abcdef')

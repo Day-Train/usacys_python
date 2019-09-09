@@ -103,3 +103,9 @@ $ for line in fp:
 $   ...do something with each line
 $   fp.tell()           #Tell me where I am in the file
 $   fp.seek()           #???
+
+bytes
+$ bytes('hello', encoding='ascii')
+$ bytes(b'hello'[0])
+
+

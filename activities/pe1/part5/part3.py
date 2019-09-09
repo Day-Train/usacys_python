@@ -29,15 +29,18 @@ def steg_decode(stego):
     Returns:
         str: message that was decoded
     '''
-    #Break out of decoding when sentinel bit found
-    #e.g. if ord(b) == 128: break
     msgbits = []
     msg = []
     for b in stego:
         msgbits.append(bin(int(b))[-1])
         if len(msgbits) == 8:
-            msg.append(chr(int(''.join(msgbits),2)))
+            c = chr(int(''.join(msgbits),2))
+            if c ==chr(128):
+                break
+
+            msg.append(c)
             msgbits.clear()
+            
     
     return ''.join(msg)
     pass
