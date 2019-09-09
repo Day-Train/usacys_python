@@ -44,7 +44,7 @@ def q4(strng):
     '''
     mylist = []
     for char in strng:
-        mylist.append(ord(char)-96)
+        mylist.append(ord(char))
     return mylist
     pass
 
@@ -98,7 +98,7 @@ def q8(filename,lst):
     with open(filename, 'w') as fp:
         for item in lst:
             if item.lower() != 'stop':
-                fp.write(item)
+                fp.write(item + '\n')
             else:
                 break
 
@@ -114,6 +114,14 @@ def q9(miltime):
     1600-2059 "Good Evening"
     2100-0259 "Good Night"
     '''
+    if int(miltime) in range(300,1200):
+        return "Good Morning"
+    elif int(miltime) in range(1200,1600):
+        return "Good Afternoon"
+    elif int(miltime) in range(1600,2100):
+        return "Good Evening"
+    else:
+        return "Good Night"
     pass
     
 def q10(numlist):
@@ -124,6 +132,11 @@ def q10(numlist):
     numbers in the list are NOT negative. If any numbers in the list are
     negative, return False.
     '''
+    for value in numlist:
+        if value < 0:
+            return False
+
+    return True
     pass
 
 q4('abcdef')
