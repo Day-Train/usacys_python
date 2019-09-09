@@ -69,8 +69,10 @@ def q6():
     Date: 12/31/1999 Time: 11:59 p.m. Temperature: 44 F
     Date: 01/01/2000 Time: 12:01 a.m. Temperature: 5.2 C
     '''
-    
-    
+    date = '(\d{2}/\d{2}/\d{4})'
+    time = '(\d{1,2}[:]\d{2} a.m.|\d{1,2}[:]\d{2} p.m.)' 
+    temp = '(\d+[.]\d+ [c|f|C|F])'
+    return date + time + temp
     pass
 
 def q7(filename):
