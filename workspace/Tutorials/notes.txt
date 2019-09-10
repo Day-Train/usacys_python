@@ -108,4 +108,11 @@ bytes
 $ bytes('hello', encoding='ascii')
 $ bytes(b'hello'[0])
 
+8. Bitwise operations
+$ ret |= 1
+$ ret
+>>> 0b1
+# |= is the bitwise-OR (equivalent to += for decimal)
+
+9. Object oriented programming
 
